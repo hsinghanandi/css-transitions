@@ -1,0 +1,187 @@
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr 2fr 1fr;
+  gap: 1rem;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+p {
+  margin: 0;
+  margin-top: 5px;
+}
+ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+li {
+  text-align: center;
+  color: white;
+  list-style-type: none;
+  border: 1px solid black;
+  background-color: black;
+  padding: 10px;
+  margin-left: 0;
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+}
+
+.container {
+  border: 1px solid black;
+}
+.container7 ul,
+.container8 ul,
+.container9 ul {
+  flex-direction: column;
+}
+
+.container7 ul li,
+.container8 ul li,
+.container9 ul li {
+  text-align: left;
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  border: 0;
+  padding: 10px 0px;
+}
+.container7 ul li .fas,
+.container8 ul li .fas,
+.container9 ul li .fas,
+.container7 ul li p,
+.container8 ul li p,
+.container9 ul li p {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.container1 ul li:hover {
+  transition: background-color 0.5s ease;
+  background-color: red;
+}
+
+.container2 ul li:hover {
+  transition: color 0.5s ease;
+  color: red;
+}
+
+.container3 ul li:hover .fas {
+  transition: color 0.5s ease;
+  color: red;
+}
+
+.container4 ul li:hover {
+  transition: box-shadow 0.5s ease;
+  box-shadow: 14px 9px 7px 0px grey;
+}
+
+.container5 ul li:hover {
+  transition: border-bottom 0.5s ease;
+  border-bottom: 4px solid red;
+}
+
+/* ********************************** */
+.container6 ul li:hover {
+  transition: border-bottom 0.5s ease;
+  /* border-bottom: 3px solid; */
+  border-bottom-width: thick;
+}
+.container6 ul li:nth-child(1):hover {
+  border-bottom-color: red;
+}
+.container6 ul li:nth-child(2):hover {
+  border-bottom-color: yellow;
+}
+.container6 ul li:nth-child(3):hover {
+  border-bottom-color: orange;
+}
+.container6 ul li:nth-child(4):hover {
+  border-bottom-color: blue;
+}
+/* ********************************** */
+
+.container7 ul li:hover {
+  transition: background-color 0.5s ease;
+  background-color: pink;
+  color: black;
+}
+
+.container8 ul li:hover {
+  background-color: yellow;
+  transition: background-color 0.5s ease;
+}
+.container8 ul li:hover .fas,
+.container8 ul li:hover p {
+  color: black;
+  transition: color 0.5s 0.75s;
+}
+
+/* ********************************** */
+.container9 ul li {
+  width: 70px;
+  animation: width 0.5s ease-in;
+  animation-fill-mode: backwards;
+  text-align: right;
+  background-color: orange;
+}
+@keyframes width {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 50px;
+  }
+}
+.container9 ul li:hover {
+  animation: width2 0.5s ease-in;
+  animation-fill-mode: forwards;
+}
+@keyframes width2 {
+  0% {
+    width: 50px;
+  }
+  100% {
+    width: 100%;
+  }
+}
+/* ********************************** */
+
+/* ********************************** */
+.container10 ul li:hover .fas {
+  animation: rotate 0.5s linear;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.container10 ul li .fas {
+  animation: rotate-back 0.5s linear;
+}
+@keyframes rotate-back {
+  from {
+    transform: rotate(359deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+/* ********************************** */
+
+.container11 ul li:hover .fas {
+  transform: rotateY(180deg);
+}
+
+.container12 ul li:hover .fas {
+  transform: rotateX(180deg);
+}
