@@ -1,2 +1,2 @@
 # css-transitions
-Practising implementation of various CSS transitions, non-responsive layout
+Demonstration and practice of various CSS transitions, non-responsive layout
